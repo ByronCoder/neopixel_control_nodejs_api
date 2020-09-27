@@ -1,0 +1,16 @@
+{
+  "name": "arduinoserialapi",
+  "version": "1.0.0",
+  "description": "API to send data to Arduino Serial port",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Byron Blank",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "serialport": "^9.0.1"
+  }
+}
