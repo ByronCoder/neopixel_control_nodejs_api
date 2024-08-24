@@ -11,6 +11,16 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/norm", (req, res) => {
+  s_port.write("n", (err) => {
+    if (err) {
+      res.send(`Error occurred connecting to serial port ${s_port}`);
+      console.log(err.message);
+    }
+    res.send("Normal pattern started!");
+  });
+});
+
 app.get("/july", (req, res) => {
   s_port.write("j", (err) => {
     if (err) {
@@ -28,6 +38,16 @@ app.get("/fall", (req, res) => {
       console.log(err.message);
     }
     res.send("Fall pattern started!");
+  });
+});
+
+app.get("/xmas", (req, res) => {
+  s_port.write("c", (err) => {
+    if (err) {
+      res.send(`Error occurred connecting to serial port ${s_port}`);
+      console.log(err.message);
+    }
+    res.send("Xmas pattern started!");
   });
 });
 
